@@ -1,6 +1,6 @@
 <koken:include file="layouts/header.html" />
 
-<koken:load limit="30" infinite="true">
+<koken:load>
 	<koken:head>
 		<meta property="og:site_name" content="{{ site.title }}" />
 		<meta property="og:title" content="{{ labels.content.plural }}" />
@@ -23,6 +23,7 @@
 		</koken:not>
 	</koken:head>
 </koken:load>
+
 
 <koken:load>
 

@@ -119,14 +119,13 @@ div#grid div.item img.k-lazy-loaded {
 /* GRID ALBUMS
 ----------------------------------------------- */
 
-div#grid.albums {
+div#grid {
     margin-top:[$grid_albums_col_offset]px;
-    margin-left:[$grid_albums_col_spacing]px;
 }
 
-div#grid.albums div.item {
-    margin-bottom:[$grid_albums_col_spacing]px;
-    margin-right:[$grid_albums_col_spacing]px;
+div#grid div.item.albums {
+    margin:[$grid_albums_col_spacing]px;
+    margin-bottom: calc([$grid_albums_col_spacing]px + [$grid_albums_col_spacing]px);
 }
 
 

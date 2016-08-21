@@ -7,10 +7,15 @@
 
 		<div class="item content thumbnail">
 
-
 		<koken:link title="View {{ content.title | content.filename }}">
-			<koken:img lazy="true" />
+			<koken:if data="settings.content_index_crop" equals="uniform">
+				<koken:img size="{{ settings.contents_crop_size }}" lazy="true" />
+			</koken:if>
+			<koken:if data="settings.content_index_crop" equals="proportional">
+				<koken:img lazy="true" />
+			</koken:if>
 		</koken:link>
+
 
 
 		<koken:if true="settings.content_index_show_title">

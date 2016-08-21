@@ -95,6 +95,12 @@
         "Navigation": {
             "icon": "type",
             "settings": {
+                "site_nav_inverse": {
+                    "label": "Inverse Nav Color",
+                    "type": "boolean",
+                    "value": true,
+                    "control_first": false
+                },
                 "site_nav_top": {
                     "label": "Site Nav Top",
                     "type": "slider",
@@ -456,67 +462,6 @@
                     },
                     "scope": ["index", "albums", "archive.albums", "sets", "set", "archives"]
                 },
-                "albums_detail_crop": {
-                    "label": "Crop",
-                    "type": "select",
-                    "options": [
-                        {
-                            "value": "proportional",
-                            "label": "None"
-                        },
-                        {
-                            "value": "uniform",
-                            "label": "Uniform"
-                        }
-                    ],
-                    "value": "proportional",
-                    "scope": ["album"]
-                },
-                "album_detail_crop_size": {
-                    "label": "Aspect ratio",
-                    "type": "select",
-                    "options": [
-                        {
-                            "label": "4:3",
-                            "value": "4:3"
-                        },
-                        {
-                            "label": "3:4",
-                            "value": "3:4"
-                        },
-                        {
-                            "label": "3:2",
-                            "value": "3:2"
-                        },
-                        {
-                            "label": "2:3",
-                            "value": "2:3"
-                        },
-                        {
-                            "label": "2:1",
-                            "value": "2:1"
-                        },
-                        {
-                            "label": "1:1",
-                            "value": "1:1"
-                        },
-                        {
-                            "label": "16:9",
-                            "value": "16:9"
-                        }
-                    ],
-                    "value": "1:1",
-                    "dependencies": {
-                        "evaluate": "all",
-                        "conditions": [
-                            {
-                                "option": "albums_detail_crop",
-                                "equals": "uniform"
-                            }
-                        ]
-                    },
-                    "scope": ["album"]
-                },
                 "content_index_crop": {
                     "label": "Crop",
                     "type": "select",
@@ -531,7 +476,7 @@
                         }
                     ],
                     "value": "proportional",
-                    "scope": ["contents", "favorites", "archive.contents"]
+                    "scope": ["contents", "album", "favorites", "archive.contents"]
                 },
                 "contents_crop_size": {
                     "label": "Aspect ratio",
@@ -576,7 +521,7 @@
                             }
                         ]
                     },
-                    "scope": ["contents", "favorites", "archive.contents"]
+                    "scope": ["contents", "album", "favorites", "archive.contents"]
                 }
             }
         },
@@ -629,7 +574,7 @@
                     "value": 0,
                     "step": 5,
                     "suffix": "px",
-                    "scope": ["albums", "sets", "set"]
+                    "scope": ["albums", "album", "contents", "sets", "set"]
                 },
                 "thumb_ratio": {
                     "label": "Aspect ratio",

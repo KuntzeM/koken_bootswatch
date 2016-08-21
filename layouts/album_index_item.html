@@ -1,0 +1,38 @@
+
+
+
+
+<div class="item thumbnail albums">
+
+
+	<koken:link title="View {{ album.title }}">
+		<koken:if data="settings.albums_crop" equals="uniform">
+			<koken:img size="{{ settings.albums_crop_size }}" lazy="true" />
+		</koken:if>
+		<koken:if data="settings.albums_crop" equals="proportional">
+			<koken:img lazy="true" />
+		</koken:if>
+	</koken:link>
+
+
+	<koken:if true="settings.albums_index_show_title">
+		<div class="caption">
+			<h3><koken:link title="View {{ album.title}}">{{ album.title }}</koken:link></h3>
+			<koken:if data="settings.albums_index_show_caption" equals="Summary">
+				<koken:not empty="album.summary">
+					<p>
+						<koken:if true="settings.albums_index_truncate">
+							{{ album.summary truncate="130" }}
+							<koken:else>
+								{{ album.summary }}
+						</koken:if>
+					</p>
+				</koken:not>
+			</koken:if>
+		</div>
+	</koken:if>
+
+
+</div>
+
+

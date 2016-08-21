@@ -31,17 +31,19 @@
 	</koken:head>
 </koken:load>
 
+<koken:load  limit="{{ settings.albums_index_limit }}">
+
+
 <koken:if true="settings.show_social">
     <koken:include file="layouts/share_content.html" />
 </koken:if>
 
-<koken:load>
-    <div id="grid" class="col-{{ settings.grid_albums_col_num }} albums">
+    <div id="grid" class="col-{{ settings.grid_albums_col_num }}">
 	<div class="column"></div>
     </div>
 
 		<koken:loop>
-			<koken:include file="layouts/album_index_loop.html" />
+			<koken:include file="layouts/album_index_item.html" />
 		</koken:loop>
 
 
