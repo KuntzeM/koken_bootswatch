@@ -23,16 +23,69 @@
                     "type": "select",
                     "options": [
                         {
+                            "label": "Cerulean",
+                            "value": "cerulean"
+                        },
+                        {
                             "label": "Cosmos",
                             "value": "cosmos"
+                        },
+
+                        {
+                            "label": "Cyborg",
+                            "value": "cyborg"
+                        },
+                        {
+                            "label": "darkly",
+                            "value": "Darkly"
+                        },
+                        {
+                            "label": "Flatly",
+                            "value": "flatly"
+                        },
+                        {
+                            "label": "Journal",
+                            "value": "journal"
+                        },
+                        {
+                            "label": "Lumen",
+                            "value": "lumen"
+                        },
+                        {
+                            "label": "Paper",
+                            "value": "paper"
+                        },
+                        {
+                            "label": "Readable",
+                            "value": "readable"
+                        },
+                        {
+                            "label": "Sandstone",
+                            "value": "sandstone"
+                        },
+                        {
+                            "label": "Simplex",
+                            "value": "simplex"
                         },
                         {
                             "label": "Slate",
                             "value": "slate"
                         },
                         {
-                            "label": "Cerulean",
-                            "value": "cerulean"
+                            "label": "Spacelab",
+                            "value": "spacelab"
+                        },
+                        {
+                            "label": "Superhero",
+                            "value": "superhero"
+                        },
+                        {
+                            "label": "United",
+                            "value": "united"
+                        },
+                        {
+                            "label": "Yeti",
+                            "value": "yeti"
                         }
                     ],
                     "value": "slate"

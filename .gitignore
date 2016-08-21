@@ -9,6 +9,8 @@
 .idea/dictionaries
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
+.idea/deployment.xml
+.idea/webServers.xml
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids
