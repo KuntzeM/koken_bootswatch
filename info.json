@@ -1,0 +1,775 @@
+{
+    "name": "Bootswatch Theme",
+    "version": "0.1",
+    "description": "",
+    "demo": "",
+    "documentation": "",
+    "author": {
+        "name": "Mathias Kuntze",
+        "link": "www.mathias-kuntze.de"
+    },
+    "koken_version_required": "0.20.0",
+    "navigation_groups": {
+        "footer": {
+            "label": "Footer"
+        }
+    },
+    "settings": {
+        "Style": {
+            "icon": "type",
+            "settings": {
+                "bootswatch": {
+                    "label": "Bootswatch Themes",
+                    "type": "select",
+                    "options": [
+                        {
+                            "label": "Cosmos",
+                            "value": "cosmos"
+                        },
+                        {
+                            "label": "Slate",
+                            "value": "slate"
+                        },
+                        {
+                            "label": "Cerulean",
+                            "value": "cerulean"
+                        }
+                    ],
+                    "value": "slate"
+                }
+            }
+        },
+        "Navigation": {
+            "icon": "type",
+            "settings": {
+                "site_nav_top": {
+                    "label": "Site Nav Top",
+                    "type": "slider",
+                    "min": 0,
+                    "max": 50,
+                    "step": 1,
+                    "value": 0,
+                    "suffix": "px"
+                },
+                "site_width": {
+                    "label": "Site Width",
+                    "type": "slider",
+                    "min": 50,
+                    "max": 100,
+                    "step": 1,
+                    "value": 80,
+                    "suffix": "%"
+                },
+                "site_title_size": {
+                    "label": "Title Size",
+                    "type": "slider",
+                    "min": 11,
+                    "max": 56,
+                    "step": 1,
+                    "value": 30,
+                    "suffix": "px"
+                },
+                "site_nav_size": {
+                    "label": "Nav Size",
+                    "type": "slider",
+                    "min": 11,
+                    "max": 56,
+                    "step": 1,
+                    "value": 16,
+                    "suffix": "px"
+                },
+                "site_title_spacing": {
+                    "label": "Spacing",
+                    "type": "slider",
+                    "min": 0,
+                    "max": 50,
+                    "step": 1,
+                    "value": 5,
+                    "suffix": "px"
+                },
+                "site_title_margin_right": {
+                    "label": "Title Margin",
+                    "type": "slider",
+                    "min": 0,
+                    "max": 99,
+                    "step": 1,
+                    "value": 45,
+                    "suffix": "px"
+                },
+                "main_nav_spacing": {
+                    "label": "Nav spacing",
+                    "type": "slider",
+                    "min": 0,
+                    "max": 50,
+                    "step": 1,
+                    "value": 35,
+                    "suffix": "px"
+                },
+                "main_nav_line_height": {
+                    "label": "Nav Line Height",
+                    "type": "slider",
+                    "min": 10,
+                    "max": 100,
+                    "step": 1,
+                    "value": 20,
+                    "suffix": "px"
+                },
+                "main_nav_height": {
+                    "label": "Nav height",
+                    "type": "slider",
+                    "min": 10,
+                    "max": 100,
+                    "step": 1,
+                    "value": 48,
+                    "suffix": "px"
+                }
+            }
+        },
+        "Layout": {
+            "icon": "layout",
+            "settings": {
+                "activity_letter_spacing": {
+                    "label": "Activity letter spacing",
+                    "type": "slider",
+                    "min": 0,
+                    "max": 10,
+                    "step": 1,
+                    "value": 4,
+                    "suffix": "px",
+                    "scope": ["index"]
+                },
+                "activity_margin_bottom": {
+                    "label": "Activity Margin Bottom",
+                    "type": "slider",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "value": 20,
+                    "suffix": "px",
+                    "scope": ["index"]
+                },
+                "index_show_slideshow": {
+                    "label": "Show slideshow",
+                    "type": "boolean",
+                    "value": true,
+                    "control_first": true,
+                    "scope": ["index"]
+                },
+                "index_show_event_essays": {
+                    "label": "Show last essays",
+                    "type": "boolean",
+                    "value": true,
+                    "control_first": true,
+                    "scope": ["index"]
+                },
+                "index_show_title": {
+                    "label": "Show slideshow title",
+                    "type": "boolean",
+                    "value": false,
+                    "control_first": true,
+                    "dependencies": {
+                        "evaluate": "all",
+                        "conditions": [
+                            {
+                                "option": "index_show_slideshow",
+                                "equals": true
+                            }
+                        ]
+                    },
+                    "scope": ["index"]
+                },
+                "index_show_caption": {
+                    "label": "Show slideshow caption",
+                    "type": "boolean",
+                    "value": false,
+                    "control_first": true,
+                    "dependencies": {
+                        "evaluate": "all",
+                        "conditions": [
+                            {
+                                "option": "index_show_slideshow",
+                                "equals": true
+                            }
+                        ]
+                    },
+                    "scope": ["index"]
+                },
+                "index_show_featured_albums": {
+                    "label": "Show featured albums",
+                    "type": "boolean",
+                    "value": false,
+                    "control_first": true,
+                    "scope": ["index"]
+                },
+                "index_show_featured_essays": {
+                    "label": "Show featured essays",
+                    "type": "boolean",
+                    "value": false,
+                    "control_first": true,
+                    "scope": ["index"]
+                },
+                "content_index_limit": {
+                    "label": "Items per page",
+                    "type": "slider",
+                    "min": 8,
+                    "max": 48,
+                    "step": 1,
+                    "value": 21,
+                    "scope": ["contents", "favorites", "archive.contents"]
+                }
+            }
+        },
+        "Album text": {
+            "icon": "type",
+            "settings": {
+                "show_album_desc": {
+                    "label": "Show description",
+                    "type": "boolean",
+                    "value": true,
+                    "control_first": true,
+                    "scope": ["album", "set"]
+                },
+                "albums_detail_show_cats": {
+                    "label": "Show categories and tags",
+                    "type": "boolean",
+                    "value": true,
+                    "control_first": true,
+                    "scope": ["album", "set"]
+                },
+                "album_detail_show_share": {
+                    "label": "Show share links",
+                    "type": "boolean",
+                    "value": true,
+                    "control_first": true,
+                    "scope": ["album", "set"]
+                },
+				"album_detail_show_dl": {
+					"label": "Show download link",
+					"type": "boolean",
+					"value": true,
+					"control_first": true,
+					"scope": [ "album" ]
+				}
+            }
+        },
+        "Album content": {
+            "icon": "type",
+            "settings": {
+                "albums_detail_show_date": {
+                    "label": "Show date",
+                    "type": "boolean",
+                    "value": false,
+                    "control_first": true,
+                    "scope": ["album"]
+                },
+                "albums_detail_show_title": {
+                    "label": "Show title",
+                    "type": "boolean",
+                    "value": true,
+                    "control_first": true,
+                    "scope": ["album"]
+                },
+                "albums_detail_show_caption": {
+                    "label": "Show caption",
+                    "type": "boolean",
+                    "value": true,
+                    "control_first": true,
+                    "scope": ["album"]
+                },
+                "albums_detail_truncate": {
+                    "label": "Truncate caption",
+                    "type": "boolean",
+                    "control_first": true,
+                    "value": true,
+                    "dependencies": {
+                        "evaluate": "all",
+                        "conditions": [
+                            {
+                                "option": "albums_detail_show_caption",
+                                "equals": true
+                            }
+                        ]
+                    },
+                    "scope": ["album"]
+                }
+            }
+        },
+        "Text": {
+            "icon": "type",
+            "settings": {
+                "albums_index_show_title": {
+                    "label": "Show title",
+                    "type": "boolean",
+                    "value": true,
+                    "scope": ["albums", "archive.albums", "sets", "set", "archives"]
+                },
+                "albums_index_show_caption": {
+                    "label": "Show caption",
+                    "type": "select",
+                    "options": [
+                        {
+                            "value": "None",
+                            "label": "None"
+                        },
+                        {
+                            "value": "Summary",
+                            "label": "Summary"
+                        },
+                        {
+                            "value": "Description",
+                            "label": "Description"
+                        }
+                    ],
+                    "value": "Summary",
+                    "scope": ["albums", "archive.albums", "sets", "set", "archives"]
+                },
+                "content_index_show_title": {
+                    "label": "Show title",
+                    "type": "boolean",
+                    "value": true,
+                    "control_first": true,
+                    "scope": ["contents", "favorites", "archive.contents", "archives"]
+                },
+                "content_index_show_caption": {
+                    "label": "Show caption",
+                    "type": "boolean",
+                    "value": true,
+                    "control_first": true,
+                    "scope": ["contents", "favorites", "archive.contents", "archives"]
+                }
+            }
+        },
+        "Thumbnails": {
+            "icon": "img",
+            "settings": {
+                "albums_crop": {
+                    "label": "Crop",
+                    "type": "select",
+                    "options": [
+                        {
+                            "value": "proportional",
+                            "label": "None"
+                        },
+                        {
+                            "value": "uniform",
+                            "label": "Uniform"
+                        }
+                    ],
+                    "value": "uniform",
+                    "scope": ["index", "albums", "archive.albums", "sets", "set", "archives"]
+                },
+                "albums_crop_size": {
+                    "label": "Aspect ratio",
+                    "type": "select",
+                    "options": [
+                        {
+                            "label": "4:3",
+                            "value": "4:3"
+                        },
+                        {
+                            "label": "3:4",
+                            "value": "3:4"
+                        },
+                        {
+                            "label": "3:2",
+                            "value": "3:2"
+                        },
+                        {
+                            "label": "2:3",
+                            "value": "2:3"
+                        },
+                        {
+                            "label": "2:1",
+                            "value": "2:1"
+                        },
+                        {
+                            "label": "1:1",
+                            "value": "1:1"
+                        },
+                        {
+                            "label": "16:9",
+                            "value": "16:9"
+                        }
+                    ],
+                    "value": "3:2",
+                    "dependencies": {
+                        "evaluate": "all",
+                        "conditions": [
+                            {
+                                "option": "albums_crop",
+                                "equals": "uniform"
+                            }
+                        ]
+                    },
+                    "scope": ["index", "albums", "archive.albums", "sets", "set", "archives"]
+                },
+                "albums_detail_crop": {
+                    "label": "Crop",
+                    "type": "select",
+                    "options": [
+                        {
+                            "value": "proportional",
+                            "label": "None"
+                        },
+                        {
+                            "value": "uniform",
+                            "label": "Uniform"
+                        }
+                    ],
+                    "value": "proportional",
+                    "scope": ["album"]
+                },
+                "album_detail_crop_size": {
+                    "label": "Aspect ratio",
+                    "type": "select",
+                    "options": [
+                        {
+                            "label": "4:3",
+                            "value": "4:3"
+                        },
+                        {
+                            "label": "3:4",
+                            "value": "3:4"
+                        },
+                        {
+                            "label": "3:2",
+                            "value": "3:2"
+                        },
+                        {
+                            "label": "2:3",
+                            "value": "2:3"
+                        },
+                        {
+                            "label": "2:1",
+                            "value": "2:1"
+                        },
+                        {
+                            "label": "1:1",
+                            "value": "1:1"
+                        },
+                        {
+                            "label": "16:9",
+                            "value": "16:9"
+                        }
+                    ],
+                    "value": "1:1",
+                    "dependencies": {
+                        "evaluate": "all",
+                        "conditions": [
+                            {
+                                "option": "albums_detail_crop",
+                                "equals": "uniform"
+                            }
+                        ]
+                    },
+                    "scope": ["album"]
+                },
+                "content_index_crop": {
+                    "label": "Crop",
+                    "type": "select",
+                    "options": [
+                        {
+                            "value": "proportional",
+                            "label": "None"
+                        },
+                        {
+                            "value": "uniform",
+                            "label": "Uniform"
+                        }
+                    ],
+                    "value": "proportional",
+                    "scope": ["contents", "favorites", "archive.contents"]
+                },
+                "contents_crop_size": {
+                    "label": "Aspect ratio",
+                    "type": "select",
+                    "options": [
+                        {
+                            "label": "4:3",
+                            "value": "4:3"
+                        },
+                        {
+                            "label": "3:4",
+                            "value": "3:4"
+                        },
+                        {
+                            "label": "3:2",
+                            "value": "3:2"
+                        },
+                        {
+                            "label": "2:3",
+                            "value": "2:3"
+                        },
+                        {
+                            "label": "2:1",
+                            "value": "2:1"
+                        },
+                        {
+                            "label": "1:1",
+                            "value": "1:1"
+                        },
+                        {
+                            "label": "16:9",
+                            "value": "16:9"
+                        }
+                    ],
+                    "value": "1:1",
+                    "dependencies": {
+                        "evaluate": "all",
+                        "conditions": [
+                            {
+                                "option": "content_index_crop",
+                                "equals": "uniform"
+                            }
+                        ]
+                    },
+                    "scope": ["contents", "favorites", "archive.contents"]
+                }
+            }
+        },
+        "Grid": {
+            "icon": "layout",
+            "settings": {
+                "grid_col_num": {
+                    "label": "Max columns",
+                    "type": "slider",
+                    "min": 1,
+                    "max": 8,
+                    "value": 3,
+                    "step": 1,
+                    "scope": ["album", "contents", "favorites", "archive.contents"]
+                },
+                "grid_col_spacing": {
+                    "label": "Spacing",
+                    "type": "slider",
+                    "min": 0,
+                    "max": 80,
+                    "value": 0,
+                    "step": 5,
+                    "suffix": "px",
+                    "scope": ["album", "contents", "favorites", "archive.contents"]
+                },
+                "grid_albums_col_num": {
+                    "label": "Max columns",
+                    "type": "slider",
+                    "min": 1,
+                    "max": 8,
+                    "value": 3,
+                    "step": 1,
+                    "scope": ["albums", "sets", "set"]
+                },
+                "grid_albums_col_spacing": {
+                    "label": "Spacing",
+                    "type": "slider",
+                    "min": 0,
+                    "max": 80,
+                    "value": 0,
+                    "step": 5,
+                    "suffix": "px",
+                    "scope": ["albums", "sets", "set"]
+                },
+                "grid_albums_col_offset": {
+                    "label": "Offset vertical",
+                    "type": "slider",
+                    "min": 0,
+                    "max": 80,
+                    "value": 0,
+                    "step": 5,
+                    "suffix": "px",
+                    "scope": ["albums", "sets", "set"]
+                },
+                "thumb_ratio": {
+                    "label": "Aspect ratio",
+                    "type": "select",
+                    "options": [
+                        {
+                            "label": "1:1",
+                            "value": "1:1"
+                        },
+                        {
+                            "label": "2:1",
+                            "value": "2:1"
+                        },
+                        {
+                            "label": "3:2",
+                            "value": "3:2"
+                        },
+                        {
+                            "label": "4:3",
+                            "value": "4:3"
+                        },
+                        {
+                            "label": "16:9",
+                            "value": "16:9"
+                        }
+                    ],
+                    "value": "3:2",
+                    "scope": ["albums", "sets", "set"]
+                },
+                "contents_show_border": {
+                    "label": "Show Bootstrap Border (not implemented)",
+                    "type": "boolean",
+                    "value": true,
+                    "control_first": true,
+                    "scope": ["contents", "albums", "album"]
+                }
+            }
+        },
+        "Albums": {
+            "icon": "layout",
+            "scope": ["timeline", "date", "tag", "category"],
+            "settings": {
+                "album_time_type": {
+                    "label": "New albums",
+                    "type": "select",
+                    "options": [
+                        {
+                            "label": "Primary cover",
+                            "value": "cover"
+                        },
+                        {
+                            "label": "Mosaic",
+                            "value": "mosaic"
+                        },
+                        {
+                            "label": "Slideshow",
+                            "value": "slideshow"
+                        }
+                    ],
+                    "value": "mosaic"
+                },
+                "album_update_time_type": {
+                    "label": "Updated albums",
+                    "type": "select",
+                    "options": [
+                        {
+                            "label": "Images",
+                            "value": "images"
+                        },
+                        {
+                            "label": "Mosaic",
+                            "value": "mosaic"
+                        },
+                        {
+                            "label": "Slideshow",
+                            "value": "slideshow"
+                        }
+                    ],
+                    "value": "mosaic"
+                },
+                "mosaic_cols": {
+                    "label": "Columns",
+                    "type": "slider",
+                    "value": 3,
+                    "min": 1,
+                    "max": 4,
+                    "step": 1,
+                    "dependencies": {
+                        "evaluate": "any",
+                        "conditions": [
+                            {
+                                "option": "album_time_type",
+                                "equals": "mosaic"
+                            },
+                            {
+                                "option": "album_update_time_type",
+                                "equals": "mosaic"
+                            }
+                        ]
+                    }
+                },
+                "mosaic_rows": {
+                    "label": "Rows",
+                    "type": "slider",
+                    "value": 2,
+                    "min": 1,
+                    "max": 3,
+                    "step": 1,
+                    "dependencies": {
+                        "evaluate": "any",
+                        "conditions": [
+                            {
+                                "option": "album_time_type",
+                                "equals": "mosaic"
+                            },
+                            {
+                                "option": "album_update_time_type",
+                                "equals": "mosaic"
+                            }
+                        ]
+                    }
+                },
+                "mosaic_gutter": {
+                    "label": "Gutter",
+                    "type": "slider",
+                    "value": 8,
+                    "max": 10,
+                    "min": 0,
+                    "step": 1,
+                    "suffix": "px",
+                    "dependencies": {
+                        "evaluate": "any",
+                        "conditions": [
+                            {
+                                "option": "album_time_type",
+                                "equals": "mosaic"
+                            },
+                            {
+                                "option": "album_update_time_type",
+                                "equals": "mosaic"
+                            }
+                        ]
+                    }
+                },
+                "album_cover_limit": {
+                    "label": "Fill all columns and rows",
+                    "type": "boolean",
+                    "value": false,
+                    "separate_lines": true,
+                    "control_first": true,
+                    "note": "Supplement covers with additional images",
+                    "note_align": "left",
+                    "dependencies": {
+                        "evaluate": "all",
+                        "conditions": [
+                            {
+                                "option": "album_time_type",
+                                "equals": "mosaic"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "Social": {
+            "icon": "social",
+            "settings": {
+                "show_social": {
+                    "label": "Show social media buttons",
+                    "type": "boolean",
+                    "value": false,
+                    "control_first": true,
+                    "reload_preview": true
+                },
+                "social_spacing": {
+                    "label": "Button spacing",
+                    "type": "slider",
+                    "min": 0,
+                    "max": 20,
+                    "step": 1,
+                    "value": 5,
+                    "suffix": "px",
+                    "dependencies": {
+                        "evaluate": "all",
+                        "conditions": [
+                            {
+                                "option": "show_social",
+                                "equals": true
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

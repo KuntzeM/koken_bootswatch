@@ -1,0 +1,28 @@
+<div id="grid" class="col-{{ settings.grid_col_num }}">
+	<div class="column"></div>
+</div>
+
+
+<koken:loop>
+
+		<div class="item content thumbnail">
+
+
+		<koken:link title="View {{ content.title | content.filename }}">
+			<koken:img lazy="true" />
+		</koken:link>
+
+
+		<koken:if true="settings.content_index_show_title">
+			<div class="caption">
+				<h3><koken:link title="View {{ content.title | content.filename }}">{{ content.title | content.filename }}</koken:link></h3>
+				<koken:if true="settings.content_index_show_caption">
+					<p>{{ content.caption }}</p>
+				</koken:if>
+			</div>
+		</koken:if>
+
+
+	</div>
+
+</koken:loop>

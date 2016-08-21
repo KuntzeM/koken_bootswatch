@@ -1,0 +1,72 @@
+
+<div class="share_content">
+
+
+    <ul class="social-links">
+        <koken:album_download>
+            <li>
+                <koken:link alt="Download Album" title="Download Album" class="btn btn-default btn-social-icon"><i class="fa fa-download fa-3x" aria-hidden="true"></i></koken:link>
+            </li>
+
+        </koken:album_download>
+
+        <li>
+            <koken:if empty="profile.twitter">
+                <a target="_blank" href="https://twitter.com/intent/tweet?text=Mathias%20Kuntze%20{{ location.site_url url_encode="true" }}&url={{ location.site_url url_encode="true" }}" class="btn btn-social-icon btn-twitter" title="Teilen {{ album.title url_encode="true" }} auf Twitter"><i class="fa fa-twitter"></i></a>
+                <koken:else>
+                    <a target="_blank" href="https://twitter.com/intent/tweet?text=Mathias%20Kuntze%20{{ location.site_url url_encode="true" }}&url={{ location.site_url url_encode="true" }}&via={{ profile.twitter }}" class="btn btn-social-icon btn-twitter" title="Teilen {{ album.title url_encode="true" }} auf Twitter"><i class="fa fa-twitter"></i></a>
+            </koken:if>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.facebook.com/sharer.php?u={{ location.site_url url_encode="true" }}" class="btn btn-social-icon btn-facebook" title="Teilen {{ album.title url_encode="true" }} auf Facebook">
+            <i class="fa fa-facebook">
+            </i>
+            </a>
+        </li>
+        <li>
+            <a href="http://pinterest.com/pin/create/button/?url={{ location.site_url url_encode="true" }}&media={{ content.presets.large.url url_encode="true" }}&description={{ album.title url_encode="true" }}" class="btn btn-social-icon btn-pinterest" title="Share {{ album.title url_encode="true" }} on Pinterest"><i class="fa fa-pinterest"></i></a>
+        </li>
+        <li>
+            <a href="http://www.tumblr.com/share/photo?source={{ album.covers.first.presets.tiny.url url_encode="true"  }}&caption=%3Cp%3E%3Cstrong%3E%3Ca href=&quot;{{ location.site_url url_encode="true" }}&quot; title=&quot;{{ album.title }}&quot;%3E{{ content.title }}%3C/a%3E%3C/strong%3E%3C/p%3E%3Cp%3E{{ content.caption url_encode="true" }}%3C/p%3E&click_thru={{ location.site_url url_encode="true" }}" class="btn btn-social-icon btn-tumblr" title="Teilen {{ album.title url_encode="true" }} auf Tumblr"><i class="fa fa-tumblr"></i></a>
+        </li>
+        <li>
+            <a target="_blank" href="https://plus.google.com/share?url={{ location.site_url url_encode="true" }}" class="btn btn-social-icon btn-google" title="Teilen {{ album.title|content.filename url_encode="true" }} auf Google+"><i class="fa fa-google"></i></a>
+        </li>
+
+    </ul>
+</div>
+
+
+<!--
+<div class="share_content right">
+
+
+
+        <ul class="social-links">
+
+			
+			
+            <koken:if empty="profile.twitter">
+                <a target="_blank" href="https://twitter.com/intent/tweet?text=Mathias%20Kuntze%20{{ album.title url_encode="true" }}&url={{ album.url url_encode="true" }}" class="share-twitter" title="Teilen {{ album.title url_encode="true" }} auf Twitter">
+                    <koken:else>
+                        <a target="_blank" href="https://twitter.com/intent/tweet?text=Mathias%20Kuntze%20{{ album.title url_encode="true" }}&url={{ album.url url_encode="true" }}&via={{ profile.twitter }}" class="share-twitter" title="Teilen {{ album.title url_encode="true" }} auf Twitter"></koken:if><i class="kicon-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.facebook.com/sharer.php?u={{ album.url url_encode="true" }}" class="share-facebook" title="Teilen {{ album.title url_encode="true" }} auf Facebook"><i class="kicon-facebook"></i></a>
+                        </li>
+                        <li>
+    		<a href="http://pinterest.com/pin/create/button/?url={{ album.url url_encode="true" }}&media={{ content.presets.large.url url_encode="true" }}&description={{ album.title url_encode="true" }}" class="share-pinterest" title="Share {{ album.title url_encode="true" }} on Pinterest"><i class="kicon-pinterest"></i></a>
+    	</li>
+                        <li>
+                            <a href="http://www.tumblr.com/share/photo?source={{ album.covers.first.presets.tiny.url url_encode="true"  }}&caption=%3Cp%3E%3Cstrong%3E%3Ca href=&quot;{{ album.url url_encode="true" }}&quot; title=&quot;{{ album.title }}&quot;%3E{{ content.title }}%3C/a%3E%3C/strong%3E%3C/p%3E%3Cp%3E{{ content.caption url_encode="true" }}%3C/p%3E&click_thru={{ album.url url_encode="true" }}" class="share-tumblr" title="Teilen {{ album.title url_encode="true" }} auf Tumblr"><i class="kicon-tumblr"></i></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://plus.google.com/share?url={{ album.url url_encode="true" }}" class="share-google" title="Teilen {{ album.title|content.filename url_encode="true" }} auf Google+"><i class="kicon-gplus"></i></a>
+                        </li>
+
+                        </ul>
+                  
+
+
+ </div>
+-->

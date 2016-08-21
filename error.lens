@@ -1,0 +1,10 @@
+<koken:include file="layouts/header.html" />
+
+
+<h2>Error {{ routed_variables.code }} - Diese Seite exisitert nicht mehr oder du hast dich vertippt!</h2>
+
+<p>Jeder kann sich mal verlaufen - kein Problem, beginne deine Reise einfach von vorne &#10137; <strong><koken:link to="front">Startseite</koken:link></strong></p>
+
+
+
+<koken:include file="layouts/footer.html" />
