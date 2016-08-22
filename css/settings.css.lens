@@ -32,7 +32,7 @@
 }
 
 
-.navbar-default .navbar-nav > li > a{
+.navbar .navbar-nav > li > a{
     line-height: [$main_nav_line_height]px;
     height: [$main_nav_height]px;
     padding-left: [$main_nav_spacing]px;
