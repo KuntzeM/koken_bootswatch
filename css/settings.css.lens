@@ -82,6 +82,7 @@ div.caption h3{
 
 .footer{
     margin-top: 20px;
+    clear: right;
 }
 /* GRID
 ----------------------------------------------- */
